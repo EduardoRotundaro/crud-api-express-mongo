@@ -119,10 +119,10 @@ let remove = async (id)=>{
             return resp
         }
 
-        let s = await ToDoItemModel.deleteOne( { _id: id } )
+        await ToDoItemModel.deleteOne( { _id: id } )
 
         resp.status = 200
-        resp.data = s
+        resp.data = true
         
         return resp
     } catch (error) {
