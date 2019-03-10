@@ -26,7 +26,7 @@ app.use(express.static('static/public'))
 let api = express.Router()
 require('./src/routes/router')(api)
 
-app.use('/api', api)
+app.use('/server', api)
 
 app.use(errorHandler)
 app.use(handler404)
