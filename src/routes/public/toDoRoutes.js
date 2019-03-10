@@ -31,7 +31,18 @@ module.exports = (app) => {
 
         console.log(`-> [PUT] ${req.originalUrl}`)
 
-        let response = await todoModule.setAsDone(req.params.id)
+        let response = await todoModule.setStatus(req.params.id, true)
+
+        console.log(`<- [PUT] ${req.originalUrl}`)
+
+        return responseObject(res, response.status, response.data, response.error)
+    })
+
+    app.put(`${BASE}set-as-pending/:id`, async function (req, res, next) {
+
+        console.log(`-> [PUT] ${req.originalUrl}`)
+
+        let response = await todoModule.setStatus(req.params.id, false)
 
         console.log(`<- [PUT] ${req.originalUrl}`)
 

@@ -67,7 +67,7 @@ let editDescription = async (id, data)=>{
     }
 }
 
-let setAsDone = async (id)=>{
+let setStatus = async (id, status)=>{
     let resp = {
         data: null,
         status: null,
@@ -85,7 +85,7 @@ let setAsDone = async (id)=>{
 
         if(toDoItem){
 
-            toDoItem.done = true
+            toDoItem.done = status
 
             await toDoItem.save()
 
@@ -161,8 +161,8 @@ module.exports = {
     editDescription: async (id, data)=>{
         return await editDescription(id, data)
     },
-    setAsDone: async (id)=>{
-        return await setAsDone(id)
+    setStatus: async (id, status)=>{
+        return await setStatus(id, status)
     },
     remove: async (id)=>{
         return await remove(id)
