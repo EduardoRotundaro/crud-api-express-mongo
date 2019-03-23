@@ -20,3 +20,16 @@ or
 ```sh
 $ node index.js
 ```
+
+### Routes
+
+New to-do item
+```sh
+method: POST
+url: /server/to-to/new
+body: {
+    description: <String>
+}
+```
+
+
