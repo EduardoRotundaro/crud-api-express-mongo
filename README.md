@@ -1,15 +1,30 @@
-# CRUD API w/ Express JS and Mongo DB
+![]()
 
-A backend application using Node JS with the Express framework, that implements a simple CRUD with the MongoDB.
+# CRUD API w/ Express.js and MongoDB
 
-### After clone
+A backend application using Node.js with the Express framework, that implements a simple CRUD with the MongoDB.
+
+---
+
+## Stack
+
+| Lib | Version |
+| ------ | ------ |
+| express | 4.16.4 |
+| mongoose | 5.4.17 |
+
+---
+
+## Running
+
+**After clone**
 
 ```sh
 $ cd crud-api-express-mongo
 $ npm install
 ```
 
-### Starting the application
+**Starting the application**
 
 ```sh
 $ npm start
@@ -21,7 +36,9 @@ or
 $ node index.js
 ```
 
-### Routes
+---
+
+## Routes
 
 * New to-do item
 ```sh
