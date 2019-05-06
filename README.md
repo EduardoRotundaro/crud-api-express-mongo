@@ -1,4 +1,4 @@
-![]()
+![](https://github.com/EduardoRotundaro/crud-api-express-mongo/blob/master/docs/images/01.png?raw=true)
 
 # CRUD API w/ Express.js and MongoDB
 
