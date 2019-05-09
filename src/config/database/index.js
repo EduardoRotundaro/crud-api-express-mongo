@@ -6,6 +6,6 @@ const SETTINGS = {
 }
 
 module.exports = { 
-    address: URL + DB_NAME,
-    options: SETTINGS
+    ADDRESS: URL + DB_NAME,
+    OPTIONS: SETTINGS
 }

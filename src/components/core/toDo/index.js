@@ -1,4 +1,4 @@
-const ToDoItemModel = require('../models/toDoItemModel').ToDoItemModel
+const toDoItemModel = require('../../model/toDoItem')
 
 let newToDoItem = async (data)=>{
     let resp = {
@@ -16,7 +16,7 @@ let newToDoItem = async (data)=>{
 
         let tdItem = { description: data.description }
 
-        let toDoItem = await ToDoItemModel.create(tdItem)
+        let toDoItem = await toDoItemModel.create(tdItem)
 
         resp.status = 200
         resp.data = toDoItem
@@ -43,7 +43,7 @@ let editDescription = async (id, data)=>{
             return resp
         }
 
-        let toDoItem = await ToDoItemModel.findOne( { _id: id } )
+        let toDoItem = await toDoItemModel.findOne( { _id: id } )
 
         if(toDoItem){
 
@@ -81,7 +81,7 @@ let setStatus = async (id, status)=>{
             return resp
         }
 
-        let toDoItem = await ToDoItemModel.findOne( { _id: id } )
+        let toDoItem = await toDoItemModel.findOne( { _id: id } )
 
         if(toDoItem){
 
@@ -119,7 +119,7 @@ let remove = async (id)=>{
             return resp
         }
 
-        await ToDoItemModel.deleteOne( { _id: id } )
+        await toDoItemModel.deleteOne( { _id: id } )
 
         resp.status = 200
         resp.data = true
@@ -141,7 +141,7 @@ let getAll = async ()=>{
 
     try {
 
-        let toDoItens = await ToDoItemModel.find({})
+        let toDoItens = await toDoItemModel.find({})
 
         resp.status = 200
         resp.data = toDoItens

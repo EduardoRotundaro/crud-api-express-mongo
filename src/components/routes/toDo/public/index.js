@@ -1,7 +1,7 @@
 const BASE = '/to-do/'
 
-const responseObject = require('../../utils/responseObject')
-const todoModule = require('../../modules/toDoModule')
+const responseObject = require('../../../../utils/responseObject')
+const toDoCore = require('../../../core/toDo')
 
 module.exports = (app) => {
 
@@ -9,7 +9,7 @@ module.exports = (app) => {
 
         console.log(`-> [POST] ${req.originalUrl}`)
 
-        let response = await todoModule.newToDoItem(req.body)
+        let response = await toDoCore.newToDoItem(req.body)
 
         console.log(`<- [POST] ${req.originalUrl}`)
 
@@ -20,7 +20,7 @@ module.exports = (app) => {
 
         console.log(`-> [PUT] ${req.originalUrl}`)
 
-        let response = await todoModule.editDescription(req.params.id, req.body)
+        let response = await toDoCore.editDescription(req.params.id, req.body)
 
         console.log(`<- [PUT] ${req.originalUrl}`)
 
@@ -31,7 +31,7 @@ module.exports = (app) => {
 
         console.log(`-> [PUT] ${req.originalUrl}`)
 
-        let response = await todoModule.setStatus(req.params.id, true)
+        let response = await toDoCore.setStatus(req.params.id, true)
 
         console.log(`<- [PUT] ${req.originalUrl}`)
 
@@ -42,7 +42,7 @@ module.exports = (app) => {
 
         console.log(`-> [PUT] ${req.originalUrl}`)
 
-        let response = await todoModule.setStatus(req.params.id, false)
+        let response = await toDoCore.setStatus(req.params.id, false)
 
         console.log(`<- [PUT] ${req.originalUrl}`)
 
@@ -53,7 +53,7 @@ module.exports = (app) => {
 
         console.log(`-> [DELETE] ${req.originalUrl}`)
 
-        let response = await todoModule.remove(req.params.id)
+        let response = await toDoCore.remove(req.params.id)
 
         console.log(`<- [DELETE] ${req.originalUrl}`)
 
@@ -64,7 +64,7 @@ module.exports = (app) => {
 
         console.log(`-> [GET] ${req.originalUrl}`)
 
-        let response = await todoModule.getAll()
+        let response = await toDoCore.getAll()
 
         console.log(`<- [GET] ${req.originalUrl}`)
 

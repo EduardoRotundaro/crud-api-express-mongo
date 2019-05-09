@@ -9,6 +9,5 @@ const ToDoItemSchema = new Schema(
     }
 );
 
-module.exports = {
-    ToDoItemModel: mongoose.model('ToDoItemModel', ToDoItemSchema)
-}
+module.exports = mongoose.model('ToDoItemModel', ToDoItemSchema)
+

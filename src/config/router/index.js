@@ -1,7 +1,7 @@
 const express = require('express')
 
 let publicRoutes = express.Router()
-require('./public/toDoRoutes')(publicRoutes)
+require('../../components/routes/toDo/public')(publicRoutes)
 
 module.exports = (api)=>{
 

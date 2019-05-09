@@ -1,4 +1,4 @@
-const responseObject = require('../utils/responseObject')
+const responseObject = require('../../utils/responseObject')
 
 module.exports = (req, res, next)=>{
     console.log(`-> [UNKNOWN] ${req.originalUrl}`)
