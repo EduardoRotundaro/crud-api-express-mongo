@@ -42,44 +42,44 @@ $ node index.js
 
 * New to-do item
 ```sh
-method: POST
-url: /server/to-do/new
+method: "POST"
+url: "/server/to-do/new"
 body: {
-    description: <String>
+    "description": <String>
 }
 ```
 
 * Edit a to-do item
 ```sh
-method: PUT
-url: /server/to-do/update-description/:ID
+method: "PUT"
+url: "/server/to-do/update-description/:ID"
 body: {
-    description: <String>
+    "description": <String>
 }
 ```
 
 * Set a to-do item as done
 ```sh
-method: PUT
-url: /server/to-do/set-as-done/:ID
+method: "PUT"
+url: "/server/to-do/set-as-done/:ID"
 ```
 
 * Set a to-do item as pending
 ```sh
-method: PUT
-url: /server/to-do/set-as-pending/:ID
+method: "PUT"
+url: "/server/to-do/set-as-pending/:ID"
 ```
 
 * Delete a to-do item
 ```sh
-method: DELETE
-url: /server/to-do/remove/:ID
+method: "DELETE"
+url: "/server/to-do/remove/:ID"
 ```
 
 * Get all to-do itens
 ```sh
 method: GET
-url: /server/to-do/
+url: "/server/to-do/"
 ```
 
 
