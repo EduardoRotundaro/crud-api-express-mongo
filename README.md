@@ -76,6 +76,12 @@ method: "DELETE"
 url: "/server/to-do/remove/:ID"
 ```
 
+* Delete all to-do itens
+```sh
+method: "DELETE"
+url: "/server/to-do/remove-all"
+```
+
 * Get all to-do itens
 ```sh
 method: GET

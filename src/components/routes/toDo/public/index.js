@@ -60,6 +60,17 @@ module.exports = (app) => {
         return responseObject(res, response.status, response.data, response.error)
     })
 
+    app.delete(`${BASE}remove-all`, async function (req, res, next) {
+
+        console.log(`-> [DELETE] ${req.originalUrl}`)
+
+        let response = await toDoCore.removeAll(req.params.id)
+
+        console.log(`<- [DELETE] ${req.originalUrl}`)
+
+        return responseObject(res, response.status, response.data, response.error)
+    })
+
     app.get(`${BASE}`, async function (req, res, next) {
 
         console.log(`-> [GET] ${req.originalUrl}`)

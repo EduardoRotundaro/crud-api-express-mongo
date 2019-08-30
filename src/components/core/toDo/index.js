@@ -132,6 +132,26 @@ let remove = async (id)=>{
     }
 }
 
+let removeAll = async ()=>{
+    let resp = {
+        data: null,
+        status: null,
+        error: null
+    }
+
+    try {
+        await toDoItemModel.deleteMany()
+        resp.status = 200
+        resp.data = true
+        
+        return resp
+    } catch (error) {
+        resp.status = 500
+        resp.error = error.message
+        return resp
+    }
+}
+
 let getAll = async ()=>{
     let resp = {
         data: null,
@@ -166,6 +186,9 @@ module.exports = {
     },
     remove: async (id)=>{
         return await remove(id)
+    },
+    removeAll: async ()=>{
+        return await removeAll()
     },
     getAll: async ()=>{
         return await getAll()
