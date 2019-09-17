@@ -52,7 +52,7 @@ body: {
 * Edit a to-do item
 ```sh
 method: "PUT"
-url: "/server/to-do/update-description/:ID"
+url: "/server/to-do/edit-description/:ID"
 body: {
     "description": <String>
 }
